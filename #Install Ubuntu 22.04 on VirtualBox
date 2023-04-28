@@ -1,0 +1,21 @@
+##Install Ubuntu 22.04 on VirtualBox
+
+**Monday, 17 October 2022**  
+**9:20 PM**
+
+1. Download Ubuntu Desktop from [ubuntu.com](https://ubuntu.com/#download).
+2. Configure Ubuntu on VirtualBox by following the instructions in this [link](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#2-create-a-new-virtual-machine).
+   - Allocate the memory 30% lower than the maximum recommended.
+   - Allocate 3 cores if recommended up to 4 cores.
+   - Choose the hard drive capacity (in this case 80GB).
+3. Configure Guest Additions CD:
+   - In the VM Manager, go to `Settings -> Storage`.
+   - Under Controller, right-click on `VBoxGuestAdditions`, select `Remove Attachment` and click `Remove`.
+   - Click the `+` icon next to `Controller` to add a new optical drive. A dialog box will open. Choose `Leave Empty -> OK`.
+   - Open the VM and select `Devices -> Insert Guest Additions`. It should power off the VM (not the VM Manager) and restart the VM.
+4. Install Guest Additions CD image through the command line:
+   - Run `sudo apt-get install virtualbox-guest-utils` in the terminal.
+
+Reference: [AskUbuntu](https://askubuntu.com/questions/573596/unable-to-install-guest-additions-cd-image-on-virtual-box)
+
+The above markdown format can be recognized by Github.
